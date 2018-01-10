@@ -1,7 +1,7 @@
 # Feature
 
 - Migrates issues from one repository to another.
-  - Posts issues as new one.
+  - Posted as new issues by executed user.
 
 # Usecase
 
@@ -53,11 +53,11 @@ Checks on GitHub->Settings->Personal access token->Select scopes
 $github-cli issue migrate
 ```
 
-subcommand | action | description
---- | --- | ---
-issue | get | displays all open issues from `src` as JSON format
-| post <issue JSON path> | creates new issues to `dst` as open status
-| migrate | get and post issues from `src` to `dst`
+|subcommand|action|description|
+|---|---|---|
+|issue|get|displays all open issues from `src` as JSON format|
+||post <issue JSON path>|creates new issues to `dst` as open status|
+||migrate|gets and posts issues from `src` to `dst`|
 
 # TODO
 
