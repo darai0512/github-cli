@@ -1,6 +1,7 @@
+module.exports =
 {
   "src": {
-    "endpoint": process.env.SRC_ENDPOINT || "http://your.corp.co.jp",
+    "endpoint": process.env.SRC_ENDPOINT || "http://your.enterprise.url/api/v3",
     "repository": process.env.SRC_REPOSITORY || "org/repo",
     "auth": process.env.SRC_AUTH || "oauth2token"
   },

@@ -25,9 +25,10 @@ Sets credencial information to your [environment variables](./conf/credentials.j
 Or, you can rewrite configure file.
 ```
 $sudo vim $(dirname $(which github-cli))/../lib/node_modules/github-cli/conf/credentials.js
+module.exports =
 {
   "src": {
-    "endpoint": "http://your.corp.co.jp",
+    "endpoint": "http://your.enterprise.url/api/v3",
     "repository": "org/repo",
     "auth": "oauth2token"
   },
@@ -38,6 +39,8 @@ $sudo vim $(dirname $(which github-cli))/../lib/node_modules/github-cli/conf/cre
   }
 }
 ```
+
+Note: In case of enterprise, please add [the path `/api/v3`](https://developer.github.com/enterprise/2.11/v3/#root-endpoint) in `endpoint`.
 
 Basic Authentication(=your GitHub login `username:password`) or OAuth2(=Personal access token) are available.
 In case of OAuth2, you need the following scopes.
