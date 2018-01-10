@@ -1,9 +1,15 @@
-# Features
+# Feature
 
+- Migrates issues from one repository to another.
+  - Posts issues as new one.
+
+# Usecase
+
+1. Publishes from GitHub Enterprise to GitHub though including a part of unpublished code. You need wrap it, so cannot use Migration of GitHub API due to exposing commit log.
 
 # How to Use
 
-depends on node.js over v8.0.0
+Depends on node.js over v8.0.0
 
 ## Install
 
@@ -47,9 +53,14 @@ Checks on GitHub->Settings->Personal access token->Select scopes
 $github-cli issue migrate
 ```
 
+subcommand | action | description
+--- | --- | ---
+issue | get | displays all open issues from `src` as JSON format
+| post <issue JSON path> | creates new issues to `dst` as open status
+| migrate | get and post issues from `src` to `dst`
+
 # TODO
 
 - [ ] Use GraphQL API
 - [ ] Migrate issue comments
 - [ ] Migrate closed issue as close status
-- [ ] Search pr from commit infomation
