@@ -5,14 +5,24 @@
   "dependencies": {
     "node-fetch": "^1.7.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.15.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "post-install": ""
+    "test": "npm run lint",
+    "lint": "eslint --ignore-path .gitignore -c .eslintrc lib/",
+    "lint:fix": "npm run lint -- --fix",
+    "postinstall": ""
+  },
+  "bin": {
+    "github-cli": "./bin/github-cli"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/darai0512/github-cli.git"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "author": "Daiki Arai darai0512@yahoo.co.jp",
   "license": "MIT",
